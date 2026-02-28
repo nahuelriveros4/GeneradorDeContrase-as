@@ -1,0 +1,128 @@
+/* Importar una fuente moderna y técnica */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;700&display=swap');
+
+:root {
+    --bg-color: #0d1117;       
+    --box-bg: #161b22;         
+    --border-color: #30363d;   
+    --accent-blue: #58a6ff;    
+    --accent-cyan: #00f2ff;    
+    --text-primary: #c9d1d9;   
+    --text-dim: #8b949e;      
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+    /* Efecto de fondo sutil de rejilla */
+    background-image: radial-gradient(circle at 2px 2px, #1a1f29 1px, transparent 0);
+    background-size: 40px 40px;
+}
+
+.box {
+    background-color: var(--box-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 20px rgba(88, 166, 255, 0.1);
+}
+
+h2 {
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+    color: var(--accent-cyan);
+    font-family: 'Fira Code', monospace;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: var(--text-dim);
+}
+
+/* Estilo para los inputs de número */
+input[type="number"] {
+    background: #0d1117;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--accent-cyan);
+    padding: 5px 8px;
+    width: 60px;
+    outline: none;
+    font-family: 'Fira Code', monospace;
+}
+
+input[type="number"]:focus {
+    border-color: var(--accent-blue);
+}
+
+/* Estilo para los checkboxes */
+input[type="checkbox"] {
+    accent-color: var(--accent-blue);
+    width: 18px;
+    height: 18px;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 12px;
+    background-color: transparent;
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+    font-family: 'Fira Code', monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--accent-blue);
+    color: #000;
+    box-shadow: 0 0 15px var(--accent-blue);
+}
+
+#contenedor-resultado {
+    background: rgba(88, 166, 255, 0.05);
+    border: 1px dashed var(--accent-blue);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#contenedor-resultado p {
+    margin: 0 0 8px 0;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+}
+
+#resultado-texto {
+    color: var(--accent-cyan);
+    word-break: break-all;
+    text-shadow: 0 0 8px rgba(0, 242, 255, 0.4);
+}

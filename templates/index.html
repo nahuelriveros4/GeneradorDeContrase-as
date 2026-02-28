@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Contraseñas</title>
+  <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2m0 14H4V8h16v10M8 17H6v-2h2v2m4 0h-2v-2h2v2m4 0h-2v-2h2v2m1-7H7V6h10v4' fill='%2300f2ff'/%3E%3Cpath d='M12 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm1 1h-2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1z' fill='%2300f2ff'/%3E%3C/svg%3E">
+</head>
+
+<body>
+  <div class="box">
+    <h2>Generador Pro</h2>
+    <label for="longitud">Longitud: <input type="number" id="longitud" min="8" max="30" required> </label>
+    
+    <label><input type="checkbox" id="numeros"> Incluir Números</label>
+    <label><input type="checkbox" id="simbolos"> Incluir Símbolos</label>
+    <button onclick="enviarDatos()">Generar</button>
+
+    <div id="contenedor-resultado" style="margin-top: 20px; display: none;">
+      <p>Contraseña:</p>
+      <strong id="resultado-texto" style="font-family: monospace; font-size: 1.2em;"></strong>
+    </div>
+  </div>
+</body>
+
+</html>
